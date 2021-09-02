@@ -7,8 +7,7 @@ export const Cadastro = (props) => {
     const [password, setPassword] = useState("");
     const [errorText, setErrorText] = useState("");
 
-    const cadastrar = () => {
-        console.log("Login chamado")
+    const cadastrar = () => {        
         const user = { nome: nome, email: email, password: password }
         console.log(user)
         const requestOptions = {
