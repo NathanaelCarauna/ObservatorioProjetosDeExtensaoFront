@@ -9,8 +9,7 @@ export const Login = (props) => {
 
     const dispatch = useAuthDispatch() 
 
-    const login = async (e) => {
-        console.log("Login chamado")
+    const login = async (e) => {        
         const payload = { email: email, password: password }   
         try {
             let response = await loginUser(dispatch, payload)
@@ -32,11 +31,11 @@ export const Login = (props) => {
                 <div className="conteudo">
                     <form className="formulario">
                         <label className="texto">Login</label>
-                        <label id='legenda' for="email">Email</label>
+                        <label id='legenda' htmlFor="email">Email</label>
                         <input type="email" name="email" id="Email" placeholder="escreva seu email" required
                             value={email}
                             onChange={(e) => setEmail(e.target.value)} />
-                        <label id='legenda' for="password">Senha</label>
+                        <label id='legenda' htmlFor="password">Senha</label>
                         <input type="password" name="password" id="Password" placeholder="escreva sua senha" required
                             value={password}
                             onChange={(e) => setPassword(e.target.value)} />
