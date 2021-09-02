@@ -1,4 +1,4 @@
-const ROOT_URL = 'https://projetos-ext-upe.herokuapp.com/';
+const ROOT_URL = 'https://projetos-ext-upe.herokuapp.com';
  
 export async function loginUser(dispatch, loginPayload) {
   const requestOptions = {
