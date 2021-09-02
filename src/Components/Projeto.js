@@ -25,7 +25,15 @@ export default ({match}) => {
 
     return (
         <div id="descricao">
+            <div id="descricaoProjeto">
             <h1>{projeto.titulo}</h1>
+            <div name="usuarios">
+                <h3>Usuários</h3>
+                {console.log(projeto.usuarios)}
+                {/* {projeto.usuarios.map(usuario => {
+                    <p key={usuario.id}>{usuario.nome}</p>
+                })} */}
+            </div>
             <div name="campus">
                 <h3>Campus</h3>
                 <p>{projeto.campus}</p>
@@ -122,17 +130,15 @@ export default ({match}) => {
                 <h3>Referências</h3>
                 <p>{projeto.referencias}</p>
             </div>
-            <div name="usuarios">
-                <h3>Usuários</h3>
-                {console.log(projeto.usuarios)}
-                {/* {projeto.usuarios.map(usuario => {
-                    <p key={usuario.id}>{usuario.nome}</p>
-                })} */}
-            </div>
             <div name="situacao">
                 <h3>Situação</h3>
                 <p>{projeto.situacao}</p>
             </div>
+            <div name="link">
+                <h3>Link Resultado do Projeto</h3>
+                <p><a href="https://www.youtube.com/watch?v=ZZ5LpwO-An4">Visit W3Schools.com!</a></p>
+            </div>
         </div>
+    </div>
     );
 }
