@@ -12,7 +12,7 @@ function Projetos(){
     const [projetos, setProjetos] = useState([]);
 
     const getProjetos = () => {
-        fetch('http://localhost:8080/api/projetos')
+        fetch('https://projetos-ext-upe.herokuapp.com/api/projetos')
             .then(async response => {
                 const data = await response.json();
 

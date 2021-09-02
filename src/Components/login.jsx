@@ -15,7 +15,7 @@ export const Login = (props) => {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(account)
         };
-        fetch('http://localhost:8080/login', requestOptions)
+        fetch('https://projetos-ext-upe.herokuapp.com/login', requestOptions)
             .then(async response => {
                 const isJson = response.headers.get('content-type')?.includes('application/json');
                 const data = isJson && await response.json();

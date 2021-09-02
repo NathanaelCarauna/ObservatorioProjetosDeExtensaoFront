@@ -9,7 +9,7 @@ export default ({match}) => {
     const [projeto, setProjeto] = useState({});
 
     const getProjeto = (id) => {
-        fetch(`http://localhost:8080/api/projetos/${id}`)
+        fetch(`https://projetos-ext-upe.herokuapp.com/api/projetos/${id}`)
             .then(async response => {
                 const data = await response.json();
 

@@ -48,7 +48,7 @@ export const CadastrarProjeto = (props) => {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(projeto)
         };
-        fetch('http://localhost:8080/api/projetos', requestOptions)
+        fetch('https://projetos-ext-upe.herokuapp.com/api/projetos', requestOptions)
             .then(async response => {
                 const isJson = response.headers.get('content-type')?.includes('application/json');
                 const data = isJson && await response.json();
