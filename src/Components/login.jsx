@@ -63,6 +63,7 @@ export const Login = (props) => {
                             : <p>{errorText}</p>
                         }
                     </form>
+                    <a href="/cadastro">Cadastre-se</a>
                 </div>
             </div>
 

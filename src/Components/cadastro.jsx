@@ -66,7 +66,6 @@ export const Cadastro = (props) => {
                         } */}
                         <div className='botoes'>
                             <button className="botao" > Cadastrar </button>{' '}
-                            <a href='/login' className="botao" id='login'  > Login </a>{' '}
                         </div>
                     </form>
                 </div>
