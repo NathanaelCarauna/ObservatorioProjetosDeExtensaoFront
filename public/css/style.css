@@ -463,10 +463,21 @@ margin-left: 30px;
 }
 
 #descricao{
-  padding: 60px 20px;
-  margin-top: 20px;
+  padding: 50px 0px;
   text-align: justify;
 }
+
+#descricaoProjeto{
+  padding: 60px 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 40px;
+  margin-right: 40px;
+  column-count: 2;
+  column-gap: 50px;
+  text-align: justify;
+}
+
 
 .cabecalho{
   padding: 20px;
@@ -508,8 +519,4 @@ textarea{
   border-radius: 10px;
   border: none;
   resize: none;
-}
-
-p{
- 
 }
