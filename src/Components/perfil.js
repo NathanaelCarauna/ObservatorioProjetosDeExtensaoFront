@@ -1,12 +1,15 @@
 import React from 'react';
 import '../App.css'
+import { useAuthState } from '../Context';
 
 
-function Perfil(){
+function Perfil(){    
+    const userDetails = useAuthState();    
+
     return(
-        <div>
-            <h1>
-                Perfil
+        <div id="about">
+            <h1>                
+                {userDetails.user.nome}
             </h1>
         </div>
     )
