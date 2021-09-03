@@ -1,11 +1,14 @@
 import { logout, useAuthDispatch, useAuthState } from "../Context";
 
 export const Navigation = (props) => {
-  const userDetails = useAuthState();
-  const dispatch = useAuthDispatch()  
+  const state = useAuthState();
+  const dispatch = useAuthDispatch()
+  console.log(state)
+
   const handleLogout = () => {
-    logout(dispatch) //call the logout action        
-}
+    logout(dispatch) 
+    props.history.push("/")
+  }
 
   return (
     <nav id='menu' className='navbar navbar-default navbar-fixed-top'>
@@ -40,7 +43,7 @@ export const Navigation = (props) => {
               </a>
             </li>
             {
-              userDetails.user
+              state.userDetails
                 ? <li>
                   <a href='/cadastrarprojetos' className='page-scroll'>
                     Novo Projeto
@@ -61,7 +64,7 @@ export const Navigation = (props) => {
             </li>
 
             {
-              userDetails.user
+              state.userDetails
                 ? <li>
                   <a href='/perfil' className='page-scroll'>
                     Perfil
@@ -70,7 +73,7 @@ export const Navigation = (props) => {
                 : <></>
             }
             {
-              userDetails.user
+              state.userDetails
                 ? <></>
                 : <li>
                   <a href='/login' className='page-scroll'>
@@ -79,8 +82,9 @@ export const Navigation = (props) => {
                 </li>
             }
             {
-              userDetails.user
-                ? <li>
+              state.userDetails
+                ? 
+                <li>
                   <button onClick={handleLogout} className='botao page-scroll'>
                     sair
                   </button>
@@ -88,7 +92,6 @@ export const Navigation = (props) => {
 
                 : <></>
             }
-
           </ul>
         </div>
       </div>
