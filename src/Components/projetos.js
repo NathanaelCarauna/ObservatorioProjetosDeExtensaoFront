@@ -39,6 +39,7 @@ function Projetos(){
                     </datalist>
                 </div>
             </div>
+            <div id='lista'>
             <ul>
                 {projetos.map(projeto => (   
                     <li id='projeto' className="projeto" key={projeto.id}>
@@ -50,6 +51,7 @@ function Projetos(){
                     </li>             
                 ))}
             </ul>
+            </div>
             
         </div>
     )
