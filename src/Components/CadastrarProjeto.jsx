@@ -102,7 +102,7 @@ export const CadastrarProjeto = (props) => {
                             value={dataDeInicio}
                             onChange={(e) => setdataDeInicio(e.target.value)} />
                         <label id='legenda' for="datafinal">Data de conclusão</label>
-                        <input type="date" id="datafinal" name="datafinal" placeholder="Data de conslusão" required
+                        <input  type="date" id="datafinal" name="datafinal" placeholder="Data de conslusão" required
                             value={dataDeConclusao}
                             onChange={(e) => setdataDeConclusao(e.target.value)} />
                         <label id='legenda' for="diasSemana">Dias da semana</label>
@@ -188,7 +188,7 @@ export const CadastrarProjeto = (props) => {
                             value={produtoFinal}
                             onChange={(e) => setprodutoFinal(e.target.value)} />
                         <label id='legenda' for="orcamento">Orçamento do projeto</label>
-                        <input type="number" id="orcamento" name="orcamento" placeholder="Orçamento do projeto" required
+                        <input  type="number" id="orcamento" name="orcamento" placeholder="Orçamento do projeto" required
                             value={orcamento}
                             onChange={(e) => setorcamento(e.target.value)} />
                         <label id='legenda' for="referencias">Referências</label>
