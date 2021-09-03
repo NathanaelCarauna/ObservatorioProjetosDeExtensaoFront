@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useReducer, useState } from "react";
 import { loginUser, useAuthDispatch } from "../Context";
+import { AuthReducer, initialState } from "../Context/reducer";
 
 export const Login = (props) => {
     const [user, setUser] = useState("");

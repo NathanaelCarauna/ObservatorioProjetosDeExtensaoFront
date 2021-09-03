@@ -312,6 +312,13 @@ header .intro-text {
   text-align: justify;
 }
 
+.notfound {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
 
 /* Portfolio Section */
 #portfolio {

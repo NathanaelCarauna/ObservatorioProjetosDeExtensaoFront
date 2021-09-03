@@ -1,10 +1,11 @@
 import React from 'react';
 import '../App.css'
-import { useAuthState } from '../Context';
+import { useAuthDispatch, useAuthState } from '../Context';
 
 
 function Perfil(){    
     const userDetails = useAuthState();    
+    console.log(userDetails)
     if(userDetails.user){
         return(
     

@@ -1,4 +1,8 @@
+import { useAuthState } from "../Context";
+
 export const About = (props) => {
+  const userDetails = useAuthState();
+  console.log(userDetails)
   return (
     <div id="about">
       <div className="container">

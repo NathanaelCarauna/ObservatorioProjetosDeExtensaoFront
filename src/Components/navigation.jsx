@@ -5,9 +5,7 @@ export const Navigation = (props) => {
   const dispatch = useAuthDispatch()
 
   const handleLogout = () => {
-    logout(dispatch) //call the logout action
-    
-    props.history.push('/') //navigate to logout page on logout
+    logout(dispatch) //call the logout action        
 }
 
   return (
@@ -84,7 +82,7 @@ export const Navigation = (props) => {
             {
               userDetails.user
                 ? <li>
-                  <button onclick={handleLogout} className='botao page-scroll'>
+                  <button onClick={handleLogout} className='botao page-scroll'>
                     sair
                   </button>
                 </li>
