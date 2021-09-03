@@ -5,7 +5,7 @@ import { Header } from './Components/header';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { About } from './Components/about';
 import Projetos from './Components/projetos';
-import Estatistica from './Components/Estatistica';
+import Estatistica from './Components/estatistica';
 import Perfil from './Components/perfil';
 import { Cadastro } from './Components/cadastro';
 import { Login } from './Components/login';
