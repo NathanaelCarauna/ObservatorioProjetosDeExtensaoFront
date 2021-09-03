@@ -17,7 +17,7 @@ export const Login = (props) => {
         try {
             let response = await loginUser(dispatch, payload)
             if (!response) return
-            props.history.push('/perfil')
+            window.location.href = '/perfil'
         } catch (error) {
             console.log(error)
         }

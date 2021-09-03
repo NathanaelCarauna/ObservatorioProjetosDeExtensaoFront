@@ -6,8 +6,8 @@ export const Navigation = (props) => {
   console.log(state)
 
   const handleLogout = () => {
-    logout(dispatch) 
-    props.history.push("/")
+    logout(dispatch)     
+    window.location.href = '/'
   }
 
   return (

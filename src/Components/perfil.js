@@ -4,14 +4,14 @@ import { useAuthDispatch, useAuthState } from '../Context';
 
 
 function Perfil(){    
-    const userDetails = useAuthState();    
-    console.log(userDetails)
-    if(userDetails.user){
+    const data = useAuthState();    
+    console.log(data)
+    if(data.userDetails){
         return(
     
             <div id="about">
                 <h1>                
-                    {userDetails.user.nome}
+                    {data.userDetails.nome}
                 </h1>
             </div>
         )
