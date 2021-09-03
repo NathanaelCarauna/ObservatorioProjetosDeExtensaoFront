@@ -1,14 +1,23 @@
 import React from 'react';
 import '../App.css'
+import { useAuthDispatch, useAuthState } from '../Context';
 
 
-function Perfil(){
-    return(
-        <div>
-            <h1>
-                Perfil
-            </h1>
-        </div>
+function Perfil(){    
+    const userDetails = useAuthState();    
+    console.log(userDetails)
+    if(userDetails.user){
+        return(
+    
+            <div id="about">
+                <h1>                
+                    {userDetails.user.nome}
+                </h1>
+            </div>
+        )
+    }
+    return (
+        <div></div>
     )
 }
 

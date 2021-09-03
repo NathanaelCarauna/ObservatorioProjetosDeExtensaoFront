@@ -1,4 +1,12 @@
+import { logout, useAuthDispatch, useAuthState } from "../Context";
+
 export const Navigation = (props) => {
+  const userDetails = useAuthState();
+  const dispatch = useAuthDispatch()  
+  const handleLogout = () => {
+    logout(dispatch) //call the logout action        
+}
+
   return (
     <nav id='menu' className='navbar navbar-default navbar-fixed-top'>
       <div className='container'>
@@ -31,31 +39,56 @@ export const Navigation = (props) => {
                 Projetos
               </a>
             </li>
-            <li>
-              <a href='/cadastrarprojetos' className='page-scroll'>
-                Novo Projeto
-              </a>
-            </li>
+            {
+              userDetails.user
+                ? <li>
+                  <a href='/cadastrarprojetos' className='page-scroll'>
+                    Novo Projeto
+                  </a>
+                </li>
+                : <></>
+            }
+
             <li>
               <a href='/estatiticas' className='page-scroll'>
                 Estatisticas
               </a>
             </li>
             <li>
-              <a href='/sobre' className='page-scroll'>         
+              <a href='/sobre' className='page-scroll'>
                 Sobre
               </a>
             </li>
-            <li>
-              <a href='/perfil' className='page-scroll'>
-                Perfil
-              </a>
-            </li>
-            <li>
-              <a href='/login' className='page-scroll'>
-                Login
-              </a>
-            </li>
+
+            {
+              userDetails.user
+                ? <li>
+                  <a href='/perfil' className='page-scroll'>
+                    Perfil
+                  </a>
+                </li>
+                : <></>
+            }
+            {
+              userDetails.user
+                ? <></>
+                : <li>
+                  <a href='/login' className='page-scroll'>
+                    Login
+                  </a>
+                </li>
+            }
+            {
+              userDetails.user
+                ? <li>
+                  <button onClick={handleLogout} className='botao page-scroll'>
+                    sair
+                  </button>
+                </li>
+
+                : <></>
+            }
+
           </ul>
         </div>
       </div>

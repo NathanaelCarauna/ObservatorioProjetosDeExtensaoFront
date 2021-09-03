@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useReducer, useState } from "react";
+import { loginUser, useAuthDispatch, useAuthState } from "../Context";
+import { AuthReducer, initialState } from "../Context/reducer";
 
 export const Login = (props) => {
     const [user, setUser] = useState("");
@@ -6,62 +8,40 @@ export const Login = (props) => {
     const [password, setPassword] = useState("");
     const [errorText, setErrorText] = useState("");
 
-    const login = () => {
-        console.log("Login chamado")
-        const account = { email: email, password: password }
-        console.log(account)
-        const requestOptions = {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(account)
-        };
-        fetch('https://projetos-ext-upe.herokuapp.com/login', requestOptions)
-            .then(async response => {
-                const isJson = response.headers.get('content-type')?.includes('application/json');
-                const data = isJson && await response.json();
+    const dispatch = useAuthDispatch()    
+    const { loading, errorMessage } = useAuthState()    
 
-                // check for error response
-                if (!response.ok) {
-                    // get error message from body or default to response status
-                    const error = (data && data.message) || response.status;
-                    console.log(error);
-                    setErrorText(error);
-                    return Promise.reject(error);
-                }
-
-                setUser(data)
-                // console.log(data.toString())
-            })
-            .catch(error => {
-                setErrorText(error.toString());
-                console.error('There was an error!', error);
-            });
-    }
-
-    const handleSubmit = (e) => {
+    const handleLogin = async (e) => {
         e.preventDefault();
-        login();
+        const payload = { email: email, password: password }
+        try {
+            let response = await loginUser(dispatch, payload)
+            if (!response) return
+            props.history.push('/perfil')
+        } catch (error) {
+            console.log(error)
+        }
     }
 
     return (
         <div id='about'>
-            <div className="container" id='formulario' onSubmit={handleSubmit}>
+            <div className="container" id='formulario' onSubmit={handleLogin}>
                 <div className="conteudo">
                     <form className="formulario">
                         <label className="texto">Login</label>
-                        <label id='legenda' for="email">Email</label>
+                        <label id='legenda' htmlFor="email">Email</label>
                         <input type="email" name="email" id="Email" placeholder="escreva seu email" required
                             value={email}
                             onChange={(e) => setEmail(e.target.value)} />
-                        <label id='legenda' for="password">Senha</label>
+                        <label id='legenda' htmlFor="password">Senha</label>
                         <input type="password" name="password" id="Password" placeholder="escreva sua senha" required
                             value={password}
                             onChange={(e) => setPassword(e.target.value)} />
-
-                        <button className="botao" > Login </button>{' '}
-                        {user !== null && user !== "" ? <p>{user.nome}</p>
-                            : <p>{errorText}</p>
-                        }
+                        {
+                            loading
+                            ? <p>Carregando ..</p> 
+                            : <button className="botao" > Login </button>
+                        }                        
                     </form>
                     <a href="/cadastro">Cadastre-se</a>
                 </div>

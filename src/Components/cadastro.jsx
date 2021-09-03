@@ -7,16 +7,14 @@ export const Cadastro = (props) => {
     const [password, setPassword] = useState("");
     const [errorText, setErrorText] = useState("");
 
-    const cadastrar = () => {
-        console.log("Login chamado")
-        const user = { nome: nome, email: email, password: password }
-        console.log(user)
+    const cadastrar = () => {        
+        const user = { nome: nome, email: email, password: password }        
         const requestOptions = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(user)
         };
-        fetch('http://localhost:8080/api/usuario', requestOptions)
+        fetch('https://projetos-ext-upe.herokuapp.com/api/usuario', requestOptions)
             .then(async response => {
                 const isJson = response.headers.get('content-type')?.includes('application/json');
                 const data = isJson && await response.json();
@@ -30,8 +28,8 @@ export const Cadastro = (props) => {
                     return Promise.reject(error);
                 }
 
-                setUser(data)
-                console.log(data.toString())
+                setUser(data)                   
+                props.history.push("/login")                
             })
             .catch(error => {
                 setErrorText(error.toString());
@@ -49,23 +47,23 @@ export const Cadastro = (props) => {
                 <div className="conteudo">
                     <form className="formulario">
                         <label className="texto">Cadastro</label>
-                        <label id='legenda' for="username">Usuario</label>
+                        <label id='legenda' htmlFor="username">Usuario</label>
                         <input type="text" name="username" id="Usuario" placeholder="escreva seu usuario" required
                             value={nome}
                             onChange={(e) => setNome(e.target.value)} />
-                        <label id='legenda' for="email">Email</label>
+                        <label id='legenda' htmlFor="email">Email</label>
                         <input type="email" name="email" id="Email" placeholder="escreva seu email" required
                             value={email}
                             onChange={(e) => setEmail(e.target.value)} />
-                        <label id='legenda' for="pwd">Senha</label>
+                        <label id='legenda' htmlFor="pwd">Senha</label>
                         <input type="password" id="pwd" name="pwd" placeholder="escreva sua senha" required
                             value={password}
                             onChange={(e) => setPassword(e.target.value)} />
-                        {/* {user !== null && user !== "" ? <span></span>
-                            : <p>{errorText}</p>
-                        } */}
                         <div className='botoes'>
                             <button className="botao" > Cadastrar </button>{' '}
+                        {user !== null && user !== "" ? <p>Cadastro realizado com sucesso</p>
+                            : <p>{errorText}</p>
+                        }
                         </div>
                     </form>
                 </div>
