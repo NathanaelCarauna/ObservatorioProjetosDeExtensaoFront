@@ -1,14 +1,14 @@
 import './App.css';
 import { AuthProvider } from "./Context";
-import { Navigation } from './Components/Navigation'
+import { Navigation } from './Components/navigation'
 import { Header } from './Components/Header';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { About } from './Components/About';
 import Projetos from './Components/Projetos';
 import Estatistica from './Components/Estatistica';
-import Perfil from './Components/Perfil';
-import { Cadastro } from './Components/Cadastro';
-import { Login } from './Components/Login';
+import Perfil from './Components/perfil';
+import { Cadastro } from './Components/cadastro';
+import { Login } from './Components/login';
 import Projeto from './Components/Projeto';
 import { CadastrarProjeto } from './Components/CadastrarProjeto';
 
