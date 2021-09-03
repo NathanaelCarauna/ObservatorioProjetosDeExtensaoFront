@@ -458,8 +458,10 @@ margin-left: 30px;
 
 #projetos{
   padding: 60px 0px;
+  height: max-content;
   margin-top: 20px;
   text-align: justify;
+  background: url(../img/assets/header_img.png) center center repeat;
 }
 
 #descricao{
@@ -470,17 +472,30 @@ margin-left: 30px;
 
 .cabecalho{
   padding: 20px;
-  color: #000;
-  background-color: rgb(216, 216, 216);
+  color: r gb(255, 255, 255);
+  background: rgba(9, 1, 80, 0.5);
+  box-shadow: 0 8px 12px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 3.5px );
+  -webkit-backdrop-filter: blur( 3.5px );
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 #selecaoCampus{
   margin-top: 30px;
 }
 
 li#projeto{
-  list-style:square;
-  margin-left: 100px;
+  list-style:none;
   margin-top: 60px;
+  width: 1000px;
+  height: 100px;
+  text-align:center;
+
+  background: rgba( 255, 255, 255, 0.50 );
+  box-shadow: 0 8px 12px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 3.5px );
+  -webkit-backdrop-filter: blur( 3.5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 h1#projeto_titulo{
@@ -509,7 +524,7 @@ textarea{
   border: none;
   resize: none;
 }
-
-p{
- 
+#lista{
+  display: flex;
+  justify-content: center;
 }
