@@ -92,17 +92,17 @@ export const CadastrarProjeto = (props) => {
                             value={campus}
                             onChange={(e) => setCampus(e.target.value)}/>
                         <label id='legenda' for="cargaHoraria">Carga horária</label>
-                        <input type="number" id="cargaHoraria" name="cargaHoraria" placeholder="Carga horária total do projeto"
+                        <input className='textinput' type="number" id="cargaHoraria" name="cargaHoraria" placeholder="Carga horária total do projeto"
                             required
                             value={cargaHorariaTotal}
                             onChange={(e) => setcargaHorariaTotal(e.target.value)}/>
                         <label id='legenda' for="dataInicio">Data de início</label>
-                        <input type="date" id="dataInicio" name="dataInicio" placeholder="Data de inicio" 
+                        <input className='textinput' type="date" id="dataInicio" name="dataInicio" placeholder="Data de inicio" 
                             required
                             value={dataDeInicio}
                             onChange={(e) => setdataDeInicio(e.target.value)}/>
                         <label id='legenda' for="datafinal">Data de conclusão</label>
-                        <input type="date" id="datafinal" name="datafinal" placeholder="Data de conslusão" required
+                        <input className='textinput' className='textinput' type="date" id="datafinal" name="datafinal" placeholder="Data de conslusão" required
                             value={dataDeConclusao}
                             onChange={(e) => setdataDeConclusao(e.target.value)}/>
                         <label id='legenda' for="diasSemana">Dias da semana</label>
@@ -169,7 +169,7 @@ export const CadastrarProjeto = (props) => {
                             value={metodologia}
                             onChange={(e) => setmetodologia(e.target.value)}/>
                         <label id='legenda' for="qtdBeneficiados">Quantidade de beneficiados</label>
-                        <input type="text" id="qtdBeneficiados" name="qtdBeneficiados" placeholder="Quantidade de beneficiados" required
+                        <input className='textinput' type="text" id="qtdBeneficiados" name="qtdBeneficiados" placeholder="Quantidade de beneficiados" required
                             value={qtdBeneficiados}
                             onChange={(e) => setqtdBeneficiados(e.target.value)}/>
                         <label id='legenda' for="relacaoAtividadePesquisa">Relacão da atividade com a pesquisa</label>
@@ -188,7 +188,7 @@ export const CadastrarProjeto = (props) => {
                             value={produtoFinal}
                             onChange={(e) => setprodutoFinal(e.target.value)}/>
                         <label id='legenda' for="orcamento">Orçamento do projeto</label>
-                        <input type="number" id="orcamento" name="orcamento" placeholder="Orçamento do projeto" required
+                        <input className='textinput' type="number" id="orcamento" name="orcamento" placeholder="Orçamento do projeto" required
                             value={orcamento}
                             onChange={(e) => setorcamento(e.target.value)}/>
                         <label id='legenda' for="referencias">Referências</label>
