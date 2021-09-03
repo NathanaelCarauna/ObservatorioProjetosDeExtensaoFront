@@ -488,6 +488,7 @@ margin-left: 30px;
 #descricao{
   padding: 50px 0px;
   text-align: justify;
+  background: url(../img/assets/back_ace_long.png) center center repeat;
 }
 
 #descricaoProjeto{
@@ -499,7 +500,7 @@ margin-left: 30px;
   column-count: 2;
   column-gap: 50px;
   text-align: justify;
-  background: url(../img/assets/back_ace_long.png) center center repeat;
+  
 }
 
 
@@ -625,3 +626,13 @@ input#orcamento{
   border-radius: 10px;
   border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
+
+input#qtdBeneficiados{
+  background: rgba( 255, 255, 255, 0.50 );
+  box-shadow: 0 8px 12px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 3.5px );
+  -webkit-backdrop-filter: blur( 3.5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
