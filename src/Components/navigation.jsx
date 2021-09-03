@@ -2,8 +2,7 @@ import { logout, useAuthDispatch, useAuthState } from "../Context";
 
 export const Navigation = (props) => {
   const userDetails = useAuthState();
-  const dispatch = useAuthDispatch()
-
+  const dispatch = useAuthDispatch()  
   const handleLogout = () => {
     logout(dispatch) //call the logout action        
 }

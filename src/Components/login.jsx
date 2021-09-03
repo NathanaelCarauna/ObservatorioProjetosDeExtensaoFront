@@ -1,5 +1,5 @@
 import { useReducer, useState } from "react";
-import { loginUser, useAuthDispatch } from "../Context";
+import { loginUser, useAuthDispatch, useAuthState } from "../Context";
 import { AuthReducer, initialState } from "../Context/reducer";
 
 export const Login = (props) => {
@@ -8,27 +8,24 @@ export const Login = (props) => {
     const [password, setPassword] = useState("");
     const [errorText, setErrorText] = useState("");
 
-    const dispatch = useAuthDispatch() 
+    const dispatch = useAuthDispatch()
+    const { loading, errorMessage } = useAuthState()    
 
-    const login = async (e) => {        
-        const payload = { email: email, password: password }   
+    const handleLogin = async (e) => {
+        e.preventDefault();
+        const payload = { email: email, password: password }
         try {
             let response = await loginUser(dispatch, payload)
             if (!response) return
             props.history.push('/perfil')
         } catch (error) {
             console.log(error)
-        }     
-    }
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        login(e);
+        }
     }
 
     return (
         <div id='about'>
-            <div className="container" id='formulario' onSubmit={handleSubmit}>
+            <div className="container" id='formulario' onSubmit={handleLogin}>
                 <div className="conteudo">
                     <form className="formulario">
                         <label className="texto">Login</label>
@@ -42,9 +39,6 @@ export const Login = (props) => {
                             onChange={(e) => setPassword(e.target.value)} />
 
                         <button className="botao" > Login </button>{' '}
-                        {user !== null && user !== "" ? <p>{user.nome}</p>
-                            : <p>{errorText}</p>
-                        }
                     </form>
                     <a href="/cadastro">Cadastre-se</a>
                 </div>

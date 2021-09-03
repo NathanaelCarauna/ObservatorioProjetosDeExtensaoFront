@@ -1,10 +1,10 @@
 import { About } from "../Components/about"
 import { CadastrarProjeto } from "../Components/CadastrarProjeto"
 import { Cadastro } from "../Components/cadastro"
-import Estatistica from "../Components/estatistica"
 import { Header } from "../Components/header"
 import { Login } from "../Components/login"
 import PageNotFound from "../Components/PageNotFound"
+import Estatistica from "../Components/estatistica"
 import Perfil from "../Components/perfil"
 import Projeto from "../Components/Projeto"
 import Projetos from "../Components/projetos"
@@ -12,43 +12,47 @@ import Projetos from "../Components/projetos"
 const routes = [
     {
         path: '/',
-        component: Header
+        component: Header,
+
     },
     {
         path: '/sobre',
-        component: About
+        component: About,
+
     },
     {
         path: '/projetos',
-        component: Projetos
+        component: Projetos,
+
     },
     {
         path: '/cadastrarprojetos',
-        component: CadastrarProjeto
+        component: CadastrarProjeto,
     },
     {
         path: '/projetos/:id',
-        component: Projeto
+        component: Projeto,
     },
     {
         path: '/estatisticas',
-        component: Estatistica
+        component: Estatistica,
     },
     {
         path: '/cadastro',
-        component: Cadastro
+        component: Cadastro,
     },
     {
         path: '/login',
-        component: Login
+        component: Login,
+
     },
     {
         path: '/perfil',
-        component: Perfil
+        component: Perfil,
     },
     {
         path: '/*',
-        component: PageNotFound
+        component: PageNotFound,
     },
 ]
 
