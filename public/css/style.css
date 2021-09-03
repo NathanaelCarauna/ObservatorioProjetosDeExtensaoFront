@@ -382,14 +382,22 @@ header .intro-text {
   align-items: center;
 }
 .conteudoCadastro{
-  width: 700px;
+  width: 1000px;
+  padding: 30px;
   color: #000;
   margin-top: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
+
   align-items: stretch;
+  background: rgba( 255, 255, 255, 0.50 );
+  box-shadow: 0 8px 12px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 3.5px );
+  -webkit-backdrop-filter: blur( 3.5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
   
 }
 .formulario{
@@ -404,6 +412,8 @@ header .intro-text {
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
+
+  
 
 }
 input{
@@ -423,6 +433,9 @@ input#pwd{
   flex-direction: column;
   align-items: center;
   color: white;
+
+  
+
 }
 
 #legenda{
@@ -464,11 +477,12 @@ margin-left: 30px;
 /*projetos*/
 
 #projetos{
+  
   padding: 60px 0px;
   height: max-content;
   margin-top: 20px;
   text-align: justify;
-  background: url(../img/assets/header_img.png) center center repeat;
+  background: url(../img/assets/back_ace_long.png) center center repeat;
 }
 
 #descricao{
@@ -485,14 +499,15 @@ margin-left: 30px;
   column-count: 2;
   column-gap: 50px;
   text-align: justify;
+  background: url(../img/assets/back_ace_long.png) center center repeat;
 }
 
 
 .cabecalho{
   padding: 20px;
   color: rgb(255, 255, 255);
-  background: rgba(9, 1, 80, 0.5);
-  box-shadow: 0 8px 12px 0 rgba( 31, 38, 135, 0.37 );
+  background: rgba(160, 160, 160, 0.5);
+  box-shadow: 0 3px 5px 0 rgba( 31, 38, 135, 0.37 );
   backdrop-filter: blur( 3.5px );
   -webkit-backdrop-filter: blur( 3.5px );
   border: 1px solid rgba( 255, 255, 255, 0.18 );
@@ -521,6 +536,8 @@ h1#projeto_titulo{
 }
 
 
+
+
 label{
   padding: 20px 0;
 }
@@ -529,7 +546,7 @@ label#legenda{
 }
 
 label.texto{
-  padding: 0;
+  padding: 10px;
 }
 
 button{
@@ -537,8 +554,74 @@ button{
 }
 
 textarea{
-  background-color: rgb(245, 245, 245);
   border-radius: 10px;
   border: none;
   resize: none;
+  
+  background: rgba( 255, 255, 255, 0.50 );
+  box-shadow: 0 8px 12px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 3.5px );
+  -webkit-backdrop-filter: blur( 3.5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+#lista{
+  display: flex;
+  justify-content: center;
+}
+
+#selecao {
+  background-color: rgba( 255, 255, 255, 0.70 );
+  border-radius: 5px;
+  width: 350px;
+  padding: 5px;
+  backdrop-filter: blur( 3.5px );
+  -webkit-backdrop-filter: blur( 3.5px );
+
+}
+
+.link{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+#cadastrarprojetos{
+  color: white;
+}
+
+input#dataInicio{
+  background: rgba( 255, 255, 255, 0.50 );
+  box-shadow: 0 8px 12px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 3.5px );
+  -webkit-backdrop-filter: blur( 3.5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+input#datafinal{
+  background: rgba( 255, 255, 255, 0.50 );
+  box-shadow: 0 8px 12px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 3.5px );
+  -webkit-backdrop-filter: blur( 3.5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+input#cargaHoraria{
+  background: rgba( 255, 255, 255, 0.50 );
+  box-shadow: 0 8px 12px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 3.5px );
+  -webkit-backdrop-filter: blur( 3.5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+input#orcamento{
+  background: rgba( 255, 255, 255, 0.50 );
+  box-shadow: 0 8px 12px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 3.5px );
+  -webkit-backdrop-filter: blur( 3.5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
 }

@@ -31,26 +31,29 @@ function Projetos(){
         <div id="projetos">
             <div className="cabecalho">
                 <h1>Projetos</h1>
+                <div className="link" >
+                    <a href='/cadastrarprojetos' id='cadastrarprojetos'  > Adicione seu projeto! </a>{' '}
+                </div>
                 <div id='selecaoCampus'>
-                    <input list='Campus' />
-                    <datalist id='Campus'>
-                        <option value='Garanhuns'/>
-                        <option value='ArcoVerde'/>
+                    <input id='selecao' list='Campus' autocomplete="off" placeholder="Escolha o Campus"/>
+                    <datalist id='Campus' >
+                        <option id='opcao' value='Garanhuns'>Garanhuns</option>
+                        <option id='opcao' value='Arcoverde'>Arcoverde</option>
                     </datalist>
                 </div>
             </div>
             <div id='lista'>
-            <ul>
-                {projetos.map(projeto => (   
-                    <li id='projeto' className="projeto" key={projeto.id}>
-                        <Link to={`/projetos/${projeto.id}` }>
-                            <div >
-                                <h3>{projeto.titulo}</h3>
-                            </div>
-                        </Link>
-                    </li>             
-                ))}
-            </ul>
+                <ul>
+                    {projetos.map(projeto => (   
+                        <li id='projeto' className="projeto" key={projeto.id}>
+                            <Link to={`/projetos/${projeto.id}` }>
+                                <div >
+                                    <h3>{projeto.titulo}</h3>
+                                </div>
+                            </Link>
+                        </li>             
+                    ))}
+                </ul>
             </div>
             
         </div>
