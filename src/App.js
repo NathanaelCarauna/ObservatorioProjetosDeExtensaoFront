@@ -3,7 +3,7 @@ import { AuthProvider } from "./Context";
 import { Navigation } from './Components/navigation'
 import { Header } from './Components/header';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { About } from './Components/About';
+import { About } from './Components/about';
 import Projetos from './Components/Projetos';
 import Estatistica from './Components/Estatistica';
 import Perfil from './Components/perfil';
