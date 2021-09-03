@@ -8,7 +8,7 @@ export const Login = (props) => {
     const [password, setPassword] = useState("");
     const [errorText, setErrorText] = useState("");
 
-    const dispatch = useAuthDispatch()
+    const dispatch = useAuthDispatch()    
     const { loading, errorMessage } = useAuthState()    
 
     const handleLogin = async (e) => {
@@ -37,8 +37,11 @@ export const Login = (props) => {
                         <input type="password" name="password" id="Password" placeholder="escreva sua senha" required
                             value={password}
                             onChange={(e) => setPassword(e.target.value)} />
-
-                        <button className="botao" > Login </button>{' '}
+                        {
+                            loading
+                            ? <p>Carregando ..</p> 
+                            : <button className="botao" > Login </button>
+                        }                        
                     </form>
                     <a href="/cadastro">Cadastre-se</a>
                 </div>
