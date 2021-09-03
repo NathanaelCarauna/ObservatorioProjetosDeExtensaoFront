@@ -1,7 +1,7 @@
 import './App.css';
 import { AuthProvider } from "./Context";
 import { Navigation } from './Components/navigation'
-import { Header } from './Components/Header';
+import { Header } from './Components/header';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { About } from './Components/About';
 import Projetos from './Components/Projetos';
