@@ -136,7 +136,7 @@ export default ({match}) => {
             </div>
             <div name="link">
                 <h3>Link Resultado do Projeto</h3>
-                <p><a href="https://www.youtube.com/watch?v=ZZ5LpwO-An4">Visit W3Schools.com!</a></p>
+                <p><a href={projeto.link}>ResultadoProjeto.com</a></p>
             </div>
         </div>
     </div>
