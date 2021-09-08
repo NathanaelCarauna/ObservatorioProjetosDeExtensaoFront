@@ -198,7 +198,7 @@ export const CadastrarProjeto = (props) => {
                             value={referencias}
                             onChange={(e) => setreferencias(e.target.value)} />
                         <label id='legenda' for="link">Links</label>
-                        <textarea type="url" id="link" name="link" placeholder="Links do Resultados do Projeto"
+                        <link type="url" id="link" name="link" placeholder="Links do Resultados do Projeto"
                             required
                             value={link}
                             onChange={(e) => setLink(e.target.value)} />
