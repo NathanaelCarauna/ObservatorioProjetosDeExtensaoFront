@@ -139,7 +139,7 @@ export default ({match}) => {
                 </div>
                 <div className='glassEffect' name="link">
                     <h3>Link Resultado do Projeto</h3>
-                    <p><a href="https://www.youtube.com/watch?v=ZZ5LpwO-An4">Visit W3Schools.com!</a></p>
+                    <p><a href={projeto.link}>Visit W3Schools.com!</a></p>
                 </div>
             </div>
         </div>
