@@ -492,14 +492,12 @@ margin-left: 30px;
 }
 
 #descricaoProjeto{
-  padding: 60px 20px;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  margin-left: 40px;
-  margin-right: 40px;
+  padding: 40px;
+  margin-bottom: 150px;
   column-count: 2;
   column-gap: 50px;
   text-align: justify;
+  align-self: start;
   
 }
 
@@ -636,3 +634,30 @@ input#qtdBeneficiados{
   border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
+#projeto_titulo{
+  padding: 40px;
+  color: #000;
+}
+
+.quadro{
+  margin: 20px;
+  height:fit-content;
+  margin-top: 80px;
+  background: rgba( 255, 255, 255, 0.50 );
+  box-shadow: 0 8px 12px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 3.5px );
+  -webkit-backdrop-filter: blur( 3.5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.glassEffect{
+  padding: 20px;
+  margin-top: 15px;
+  background: rgba( 255, 255, 255, 0.50 );
+  box-shadow: 0 8px 12px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 3.5px );
+  -webkit-backdrop-filter: blur( 3.5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
