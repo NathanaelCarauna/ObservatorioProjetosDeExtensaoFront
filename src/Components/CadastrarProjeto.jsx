@@ -27,6 +27,7 @@ export const CadastrarProjeto = (props) => {
     const [produtoFinal, setprodutoFinal] = useState("");
     const [orcamento, setorcamento] = useState("");
     const [referencias, setreferencias] = useState("");
+    const [link, setLink] = useState("");
     const [usuarios, setusuarios] = useState("");
     const [situacao, setsituacao] = useState("");
     const [errorText, setErrorText] = useState("");
@@ -196,6 +197,11 @@ export const CadastrarProjeto = (props) => {
                             required
                             value={referencias}
                             onChange={(e) => setreferencias(e.target.value)} />
+                        <label id='legenda' for="link">Links</label>
+                        <textarea type="url" id="link" name="link" placeholder="Links do Resultados do Projeto"
+                            required
+                            value={link}
+                            onChange={(e) => setLink(e.target.value)} />
 
                         {
                             loading
