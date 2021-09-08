@@ -520,7 +520,10 @@ li#projeto{
   margin-top: 60px;
   width: 1000px;
   height: 100px;
-  text-align:center;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
 
   background: rgba( 255, 255, 255, 0.50 );
   box-shadow: 0 8px 12px 0 rgba( 31, 38, 135, 0.37 );
@@ -660,4 +663,34 @@ input#qtdBeneficiados{
   -webkit-backdrop-filter: blur( 3.5px );
   border-radius: 10px;
   border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+textarea#titulo{
+  background-color: none;
+  color: #000;
+  font-size: larger;
+  text-align: center;
+
+  background:none;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-radius: 10px;
+  border: none;
+
+}
+
+
+textarea#tituloG{
+  background-color: none;
+  color: #000;
+  font-size: 50px;
+
+  background:none;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-radius: 10px;
+  border: none;
+
 }

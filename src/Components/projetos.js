@@ -46,13 +46,11 @@ function Projetos() {
             <div id='lista'>
                 <ul>
                     {projetos.map(projeto => (
-                        <li id='projeto' className="projeto" key={projeto.id}>
-                            <Link to={`/projetos/${projeto.id}`}>
-                                <div >
-                                    <h3>{projeto.titulo}</h3>
-                                </div>
-                            </Link>
-                        </li>
+                        <Link to={`/projetos/${projeto.id}`}>
+                            <li id='projeto' className="projeto" key={projeto.id}>
+                                <textarea id='titulo' rows="3" cols="100" disabled>{projeto.titulo}</textarea>
+                            </li>
+                        </Link>
                     ))}
                 </ul>
             </div>
