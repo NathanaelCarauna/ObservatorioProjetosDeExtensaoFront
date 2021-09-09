@@ -32,7 +32,7 @@ export const CadastrarProjeto = (props) => {
     const [situacao, setsituacao] = useState("");
     const [errorText, setErrorText] = useState("");
 
-    const { loading, errorMessage } = useAuthState()  
+    const { userDetails, loading, errorMessage } = useAuthState()  
 
     const cadastrar = () => {
         console.log("Login chamado")
@@ -64,12 +64,38 @@ export const CadastrarProjeto = (props) => {
                     setErrorText(error);
                     return Promise.reject(error);
                 }                
+                addParcipacao(JSON.parse(userDetails).id, data.id)
                 props.history.push("/projetos")
             })
             .catch(error => {
                 setErrorText(error.toString());
                 console.error('There was an error!', error);
             });
+    }
+    const addParcipacao = (userId, projetoId) => {
+        const participacao = { 
+                usuario_id: userId,
+                projeto_id: projetoId
+        }
+        const requestOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(participacao)
+        };
+        fetch('https://projetos-ext-upe.herokuapp.com/api/participacao', requestOptions)
+            .then(async response => {
+                const isJson = response.headers.get('content-type')?.includes('application/json');
+                const data = isJson && await response.json();
+                
+                if (!response.ok) {
+                    // get error message from body or default to response status
+                    const error = (data && data.message) || response.status;
+                    console.log(error);
+                    setErrorText(error);
+                    return Promise.reject(error);
+                }      
+                console.log(data)
+            })
     }
 
     const handleSubmit = (e) => {
