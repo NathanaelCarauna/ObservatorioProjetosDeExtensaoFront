@@ -665,6 +665,17 @@ input#qtdBeneficiados{
   border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
+#glassEffect{
+  padding: 20px;
+  margin-top: 15px;
+  background: rgba( 255, 255, 255, 0.20 );
+  /* box-shadow: 0 8px 12px 0 rgba( 31, 38, 135, 0.37 ); */
+  backdrop-filter: blur( 3.5px );
+  -webkit-backdrop-filter: blur( 3.5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
 textarea#titulo{
   background-color: none;
   color: #000;
@@ -693,4 +704,32 @@ textarea#tituloG{
   border-radius: 10px;
   border: none;
 
+}
+
+.grafico{
+  margin: 10px;
+  padding: 20px;
+  /* width: 500px;
+  height: 400px; */
+}
+
+.graficos{
+  display: flex;
+}
+
+.legendas{
+  display: flex;
+  justify-content: space-around;
+  /* margin: 10px 80px; */
+
+}
+
+legend{
+  text-align: center;
+}
+
+#estatisticas{
+  padding: 20px;
+  margin-top: 80px;
+  margin: 80px 30px
 }
