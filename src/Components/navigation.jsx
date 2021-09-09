@@ -85,8 +85,8 @@ export const Navigation = (props) => {
               state.userDetails
                 ? 
                 <li>
-                  <button onClick={handleLogout} className='botao page-scroll'>
-                    sair
+                  <button Click={handleLogout} className='sair'>
+                    Sair
                   </button>
                 </li>
 
