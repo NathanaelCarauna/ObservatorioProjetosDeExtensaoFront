@@ -39,6 +39,8 @@ function Estatistica() {
 
     var countProjeto = modalidade.filter(x => x === 'PROJETO').length
     var countPrograma = modalidade.filter(x => x === 'PROGRAMA').length
+    var countEvento = modalidade.filter(x => x === 'EVENTO').length
+    var countCurso = modalidade.filter(x => x === 'CURSO').length
 
     var countPFA = edital.filter(x => x === 'PFA').length
     var countFLUXO_CONTINUO = edital.filter(x => x === 'FLUXO_CONTINUO').length
@@ -57,14 +59,16 @@ function Estatistica() {
                 <div className='grafico' id='glassEffect'>
                     <Pie
                         data={{
-                            labels: ['PROJETO', 'PROGRAMA'],
+                            labels: ['PROJETO', 'PROGRAMA', 'EVENTO','CURSO'],
                             datasets: [
                                 {
                                     label: 'Status',
-                                    data: [countProjeto, countPrograma],
+                                    data: [countProjeto, countPrograma, countEvento, countCurso],
                                     backgroundColor: [
                                         'rgba(54, 162, 235, 0.2)',
                                         'rgba(255, 99, 132, 0.2)',
+                                        'rgba(119, 255, 51,0.2)',
+                                        'rgba(255, 255, 51, 0.2)',
 
 
                                     ],

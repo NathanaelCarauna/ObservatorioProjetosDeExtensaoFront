@@ -535,7 +535,7 @@ a#login {
 
 /*projetos*/
 
-#projetos {
+.projetos {
   padding: 60px 0px;
   height: max-content;
   margin-top: 20px;
@@ -764,6 +764,7 @@ textarea#tituloG {
 
 .graficos{
   display: flex;
+  justify-content: space-around;
 }
 
 .legendas{
