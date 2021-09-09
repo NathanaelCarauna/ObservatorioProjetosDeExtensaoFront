@@ -1,4 +1,4 @@
-const ROOT_URL = 'https://projetos-ext-upe.herokuapp.com';
+const ROOT_URL = 'https://projetos-ext-upe.herokuapp.com/api';
  
 export async function loginUser(dispatch, loginPayload) {
   const requestOptions = {
@@ -12,7 +12,7 @@ export async function loginUser(dispatch, loginPayload) {
     let response = await fetch(`${ROOT_URL}/login`, requestOptions);
     let data = await response.json();
  
-    if (data) {
+    if (data.id) {
       dispatch({ type: 'LOGIN_SUCCESS', payload: data });
       localStorage.setItem('currentUser', JSON.stringify(data));            
       return data

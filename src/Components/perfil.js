@@ -13,7 +13,7 @@ function Perfil() {
     const [projetos, setProjetos] = useState([]);
 
     const getProjetos = () => {
-        fetch(`https://projetos-ext-upe.herokuapp.com/api/participacao/${state.userDetails.id}`)
+        fetch(`https://projetos-ext-upe.herokuapp.com/api/participacao/${JSON.parse(state.userDetails).id}`)
             .then(async response => {
                 const data = await response.json();
 
