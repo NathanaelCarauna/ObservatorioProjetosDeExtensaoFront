@@ -45,7 +45,7 @@ export default ({ match }) => {
                     return Promise.reject(error);
                 }
                 console.log(data)
-                setComentarios([...comentarios, data]);
+                setComentarios([data, ...comentarios]);
                 setComentario({comentario: ""});
             })
     }
@@ -177,25 +177,25 @@ export default ({ match }) => {
                         <p><a href="https://www.youtube.com/watch?v=ZZ5LpwO-An4">Visit W3Schools.com!</a></p>
                     </div>
                 </div>
-                <div>
+                <div className="comentariosContainer glassEffect">
                     <h2>Comentários:</h2>
-                    <div>
+                    <div className="listaComentarios">
                         {comentarios ? comentarios.map((item, i) => {
                             return (
-                                <div key={i}>
-                                    <p>{item.usuario}</p>
-                                    <textarea rows="3" cols="140" id="novoProjeto"
+                                <div key={i} className="glassEffect">
+                                    <p className="nomeComentario">{item.usuario} comentou:</p>
+                                    <textarea rows="3" cols="140" id="comentario"
                                         name='comentario'
-                                        value={item.comentario}
+                                        value={`\t"${item.comentario}"`}
                                         readOnly
                                     ></textarea>
                                 </div>
                             )
                         }) : <></>}
                     </div>
-                    <div>
+                    <div className="commentArea">
                         <textarea rows="4" cols="140" value={comentario.comentario} onChange={e=> setComentario(e.target.value)}/>
-                        <button onClick={addComentario} >Enviar</button>
+                        <button onClick={addComentario} className="enviarBtn botao">Enviar</button>
                         {/* disabled={state.userDetails?false:true} */}
                     </div>
                 </div>
