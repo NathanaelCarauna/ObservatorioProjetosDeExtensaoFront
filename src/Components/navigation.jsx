@@ -62,6 +62,11 @@ export const Navigation = (props) => {
                 Sobre
               </a>
             </li>
+            <li>
+              <a href='https://docs.google.com/forms/d/e/1FAIpQLScWgtPdDXBtgfadqO-yyFeJ6W7tzsaaxWZVhOi37PKwr-5irA/viewform' className='page-scroll'>
+                Avalie Aqui
+              </a>
+            </li>
 
             {
               state.userDetails
